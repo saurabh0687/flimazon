@@ -1,3 +1,4 @@
+import 'package:flimazon/utils/routes.dart';
 import 'package:flutter/material.dart';
 
 class LoginPage extends StatelessWidget {
@@ -7,12 +8,13 @@ class LoginPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return  Material(
       color: Colors.white,
+      child:SingleChildScrollView(
       child: Column(
        children: [Image.asset("assets/login.png",fit: BoxFit.cover,),
         const SizedBox(height: 20,),// use to provide space of given height b/w image and text(welcome)
        const Text("Welcome",
        style: TextStyle(
-        fontSize: 22,
+        fontSize: 28,
         fontWeight: FontWeight.bold
        ),
        ),
@@ -29,17 +31,16 @@ class LoginPage extends StatelessWidget {
          TextFormField( 
           obscureText: true,//this is used to hide the password
           decoration: const InputDecoration(
-            hintText: "Enter PassWord",
+            hintText: "Enter Password",
             labelText:("Password"),
           ),
         ),
          const SizedBox(height: 20,),
          ElevatedButton(onPressed:(){
-                    print("Hi saurabh");                       // we passed call back function to this as we pressed it back the given function
+                  Navigator.pushNamed(context, MyRoutes.homeRoute);  // we passed call back function to this as we pressed it back the given function
          }, child: Text("login"),
-        style: TextButton.styleFrom(
-
-        ),)
+        style: TextButton.styleFrom(minimumSize: Size(130,40)),// ab hm cha rhe hain ki jese hi login pr click ho to hm homepage pr chle jaye
+        )
           ],
         ),
        
@@ -47,6 +48,7 @@ class LoginPage extends StatelessWidget {
         
        ],
       )
+    )
     );
   }
 }
