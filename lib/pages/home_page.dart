@@ -5,7 +5,7 @@ class HomePage extends StatelessWidget {  //ye ek HomePage nam ki stateless widg
 
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(  //scaffold ek widget hai jisme head(Appbar) body and fotter hota hai
+    return  Scaffold(  //scaffold ek widget hai jisme head(Appbar) body and footer hota hai
       appBar: AppBar( 
            //appBar- property hai jbki AppBar ek widget hai 
         
