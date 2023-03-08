@@ -1,4 +1,7 @@
+import 'package:flimazon/widgets/drawer.dart';
 import 'package:flutter/material.dart';
+
+//import '../widgets/drawer.dart';
 
 class HomePage extends StatelessWidget {  //ye ek HomePage nam ki stateless widget bn gyi jise hmne apne according bnaya hai
   const HomePage({super.key});
@@ -14,10 +17,14 @@ class HomePage extends StatelessWidget {  //ye ek HomePage nam ki stateless widg
       body: Center(
         
         child: Container(  // container ek widget hai jise hm container ki trh hi use krte hain
-          child: const Text("Welcome, buddy"), //text widget hm text ko display krane ke liye krte hain
+          child: const Text("Welcome",style: TextStyle(
+            fontSize: 40,
+            fontWeight: FontWeight.bold,
+            color: Colors.deepPurple
+          ),), //text widget hm text ko display krane ke liye krte hain
         )
         ),
-        drawer: const Drawer(),// drawer ek menubar jesa hai 
+        drawer: MyDrawer(),//  ynha se drawer  ko hta kr ek alg file me dal diya hai or uske constructor ko call kra diya hai
     );
   }
 }

@@ -26,7 +26,7 @@ void main() {
       brightness: Brightness.light,
     
      ),
-     initialRoute: "/",
+     initialRoute: MyRoutes.homeRoute,
      routes: {
    "/":(context) => const LoginPage(), // hmne route me / lga kr homepage ko default bna diya hai,or hmne upr home m bhi home page hi diya tha
     MyRoutes.homeRoute:(context) => const HomePage() ,                            //to dono me se hme ek hi jgh rkhna hai dusra htana pdega...route ka mtlb hota hai konsa page kb open hoga mtlb routing of pages
