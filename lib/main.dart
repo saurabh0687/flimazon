@@ -1,9 +1,13 @@
 //import 'dart:io';
 
+// ignore_for_file: prefer_const_constructors
+
 //import 'package:flutter/cupertino.dart';
 import 'package:flimazon/pages/login_page.dart';
 import 'package:flimazon/utils/routes.dart';
+import 'package:flimazon/widgets/theme.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 //import 'package:google_fonts/google_fonts.dart';
 
 import 'pages/home_page.dart';
@@ -20,12 +24,8 @@ void main() {
     return   MaterialApp(  
       debugShowCheckedModeBanner: false,  
      themeMode: ThemeMode.light,
-    theme: ThemeData(primarySwatch: Colors.deepPurple,
-    ),
-    darkTheme: ThemeData(
-      brightness: Brightness.light,
-    
-     ),
+    theme: MyTheme.lightTheme(context),
+    darkTheme: MyTheme.darkTheme(context),
      initialRoute: MyRoutes.homeRoute,
      routes: {
    "/":(context) => const LoginPage(), // hmne route me / lga kr homepage ko default bna diya hai,or hmne upr home m bhi home page hi diya tha
