@@ -63,6 +63,7 @@ flutter:
   assets:
     - assets/login.png
     - assets/login2.png
+    - assets/iphone.jpg
 
 
  

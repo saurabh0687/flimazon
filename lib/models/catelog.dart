@@ -1,5 +1,19 @@
+class CatelogModel
+{
+  static final items=[
+     Item(
+  id:2000331550094,
+  name:"iphone 12 pro max",
+  desc:"128GB/256GB/512GB storage",
+  price:6250,
+  color:"Brown", 
+  image:"https://fdn2.gsmarena.com/vv/pics/apple/apple-iphone-13-01.jpg")
+    
+  ];
+}
+
 class Item{
-  final String id;
+  final int id;
    final String name;
     final String desc;
     final num price;
@@ -10,6 +24,4 @@ class Item{
    
 
 }
-final products=[
-  Item(id:"2000331550094", name:"Saurabh Baghel", desc:"B.tech,CSE_IOT #rd year", price:6250, color:"Brown", image:"https://www.dreamstime.com/photos-images/nature.html")
-];
+
