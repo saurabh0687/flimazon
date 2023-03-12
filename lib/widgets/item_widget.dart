@@ -14,7 +14,7 @@ class ItemWidget extends StatelessWidget {
     
       child: ListTile(
         onTap: () {
-           
+           print("${item.name}pressed");
         },
         leading: Image.asset("assets/iphone.jpg"),
         title:Text(item.name,

@@ -11,19 +11,24 @@ class HomePage extends StatelessWidget {  //ye ek HomePage nam ki stateless widg
 
   @override
   Widget build(BuildContext context) {
+    final dumyList=List.generate(50,(index)=>CatelogModel.items[0]);
     return  Scaffold(  //scaffold ek widget hai jisme head(Appbar) body and footer hota hai
       appBar: AppBar( 
            //appBar- property hai jbki AppBar ek widget hai 
         
         title: const Text("Flimazon"),
       ),
-      body:
-      ListView.builder(itemCount: CatelogModel.items.length,
+      body:Padding(
+        padding: const EdgeInsets.all(16.0),
+      
+          child: ListView.builder(itemCount: dumyList.length,
       itemBuilder: (context, index){
         return ItemWidget(
-          item: CatelogModel.items[index],
+          item: dumyList[index],
         );
-      },),
+      },
+      ),
+      ),
         drawer: MyDrawer(),//  ynha se drawer  ko hta kr ek alg file me dal diya hai or uske constructor ko call kra diya hai
     );
   }
