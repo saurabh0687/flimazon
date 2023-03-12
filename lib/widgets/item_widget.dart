@@ -16,7 +16,7 @@ class ItemWidget extends StatelessWidget {
         onTap: () {
            print("${item.name} pressed");
         },
-        leading: Image.asset("assets/iphone.jpg"),
+        leading: Image.network(item.image),
         title:Text(item.name,
         style: TextStyle(
           fontWeight: FontWeight.bold
